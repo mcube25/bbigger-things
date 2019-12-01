@@ -1,4 +1,5 @@
-.container {
+
+/*.container {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 300px 300px 300px;
@@ -6,15 +7,39 @@
     grid-template-columns: 300px 300px 1fr;
     grid-template-columns: 300px 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: repeat(3, 1fr); /*how many times to repeat what*/
-    grid-template-columns: auto 1fr 1fr; /*auto = max size of content*/
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: auto 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: repeat(auto-fill, 200px); /*don't care how many columns. Just figure it out for me. show how you can change sizing of page*/
+    grid-template-columns: repeat(auto-fill, 200px);
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-items: end;
     align-items: end;
+    }
+*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 3fr 1fr;
+  }
+  header {
+    grid-column: span 6;
+  }
+  main {
+    grid-column: span 4;
+  }
+  aside {
+    grid-column-start: 5;
+    grid-column: span 2;
+  }
+  footer {
+    grid-column: span 6;
+  }
+img {
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    transition: all 1s;
 }
-
 .green {
     grid-column: span 2; /*high number will cause it to create extra grids even if we didn't tell it*/
     grid-row: span 2;
